@@ -1,0 +1,51 @@
+body{
+   background-color: #E0FEEC;
+}
+.container{
+	width: 500px;
+	height: 500px;
+	background-color: #DCC1F9;
+	position: absolute;
+	left:50%;
+	top:50%;
+	margin-top: -250px;
+	margin-left: -250px;
+	-webkit-perspective:800;
+}
+
+.container div{
+	width: 125px;
+	height: 125px;
+	background-color: #DBF6F9;
+	float: left;
+}
+
+.container div img{
+	width: 125px;
+	height: 125px;
+}
+.side{
+	 transition:all 0.3s;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 125px;
+  height: 125px;
+}
+
+
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+
+}
+
+.front {
+  z-index: 2;
+  background-color: red;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
